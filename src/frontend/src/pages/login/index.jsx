@@ -75,10 +75,16 @@ export default (props) => {
         //   secure: true,
         //   "max-age": 7200,
         // });
-        setCookie("studentID", studentID, {
-          secure: true,
-          "max-age": 7200,
-        });
+
+
+        // setCookie("studentID", studentID, {
+        //   secure: true,
+        //   "max-age": 7200,
+        // });
+
+        document.cookie = `studentID=${studentID};expires=Thu, 31 Dec 2022 12:00:00 UTC`;
+
+        // alert("set cookie successfully");
         window.location.href = "/";
       } else {
         alert("login failed");
